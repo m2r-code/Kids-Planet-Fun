@@ -1,0 +1,6 @@
+{
+  "name": "Kids Planet Fun - Modern Indoor Playground",
+  "description": "Modern family indoor playground & entertainment center in Brownsburg, Indiana. Featuring multi-level climbing play structures, giant ball pits, wave slides, toddler soft-play, arcade gaming, birthday parties, and online ticketing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
