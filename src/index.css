@@ -8,17 +8,18 @@
 
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
   }
 
   body {
     font-family: var(--font-body);
-    color: #1e293b;
-    background-color: #FFFDF9;
+    background-color: #070B14;
+    color: #F1F5F9;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 }
 
@@ -30,18 +31,45 @@
   font-family: var(--font-body);
 }
 
-/* Custom scrollbar for gallery / drawers */
+/* Valo Motion style radial background effects */
+.glow-cyan {
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(7, 11, 20, 0) 70%);
+}
+
+.glow-orange {
+  background: radial-gradient(circle, rgba(255, 139, 36, 0.18) 0%, rgba(7, 11, 20, 0) 70%);
+}
+
+.glow-purple {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(7, 11, 20, 0) 70%);
+}
+
+/* Glassmorphism surfaces */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #0B1120;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #1E293B;
   border-radius: 9999px;
+  border: 2px solid #0B1120;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #334155;
 }

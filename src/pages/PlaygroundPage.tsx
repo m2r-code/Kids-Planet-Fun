@@ -16,7 +16,7 @@ import {
   Wifi,
   Coffee,
   Eye,
-  SlidersHorizontal,
+  Zap,
 } from 'lucide-react';
 
 interface PlaygroundPageProps {
@@ -38,16 +38,16 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
       : ATTRACTIONS.filter((a) => a.ageRange.includes('4–14') || a.ageRange.includes('All Ages'));
 
   return (
-    <div className="space-y-16 sm:space-y-24 max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="space-y-16 sm:space-y-24 max-w-7xl mx-auto px-4 sm:px-6 py-8 text-slate-100">
       {/* Page Header */}
       <section className="text-center max-w-3xl mx-auto space-y-4">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#174A91] bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
-          Attraction Guide
+        <span className="text-xs font-black uppercase tracking-widest text-[#38BDF8] bg-sky-500/10 px-3.5 py-1.5 rounded-full border border-sky-500/20">
+          Arena Attractions Guide
         </span>
-        <h1 className="font-heading font-black text-4xl sm:text-5xl text-slate-900 leading-tight">
-          Explore Our World of Adventure
+        <h1 className="font-heading font-black text-4xl sm:text-5xl text-white leading-tight">
+          Explore Our World of Active Adventure
         </h1>
-        <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+        <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
           Over 15,000 square feet of multi-tiered climbing, diving into 50,000 sanitized balls, flying down racing wave slides, and playing in gentle toddler foam zones.
         </p>
 
@@ -57,8 +57,8 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
             onClick={() => setFilterAge('all')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
               filterAge === 'all'
-                ? 'bg-[#174A91] text-white shadow-xs'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                ? 'bg-[#174A91] text-white shadow-md'
+                : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
             }`}
           >
             All 6 Adventure Zones
@@ -67,8 +67,8 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
             onClick={() => setFilterAge('toddlers')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
               filterAge === 'toddlers'
-                ? 'bg-[#FF8B24] text-white shadow-xs'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                ? 'bg-[#FF8B24] text-white shadow-md'
+                : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
             }`}
           >
             Toddler-Friendly (Ages 0–3)
@@ -77,8 +77,8 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
             onClick={() => setFilterAge('bigKids')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
               filterAge === 'bigKids'
-                ? 'bg-[#174A91] text-white shadow-xs'
-                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                ? 'bg-[#174A91] text-white shadow-md'
+                : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
             }`}
           >
             Ages 4–14 High Energy
@@ -93,11 +93,11 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
           return (
             <div
               key={attr.id}
-              className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-10 rounded-3xl bg-white border border-slate-200/80 shadow-xs hover:shadow-lg transition-all duration-300`}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-10 rounded-3xl bg-[#0B1323] border border-white/10 shadow-2xl hover:border-sky-500/30 transition-all duration-300"
             >
               {/* Media Column */}
               <div
-                className={`lg:col-span-6 relative rounded-2xl overflow-hidden aspect-4/3 shadow-md bg-slate-100 ${
+                className={`lg:col-span-6 relative rounded-2xl overflow-hidden aspect-4/3 shadow-2xl border border-white/10 bg-slate-950 ${
                   isEven ? 'lg:order-1' : 'lg:order-2'
                 }`}
               >
@@ -107,10 +107,10 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-4 left-4 bg-[#174A91] text-[#FFD447] text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-[#FFD447] text-xs font-bold px-3 py-1.5 rounded-full border border-white/10">
                   {attr.badge}
                 </div>
-                <div className="absolute top-4 right-4 bg-slate-900/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10">
                   {attr.ageRange}
                 </div>
               </div>
@@ -122,26 +122,26 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
                 }`}
               >
                 <div className="space-y-2">
-                  <span className="text-xs font-bold text-[#FF8B24] uppercase tracking-wider">
-                    Zone 0{index + 1}
+                  <span className="text-xs font-mono font-bold text-[#38BDF8] uppercase tracking-wider">
+                    Arena Zone 0{index + 1}
                   </span>
-                  <h3 className="font-heading font-black text-2xl sm:text-3xl text-slate-900">
+                  <h3 className="font-heading font-black text-2xl sm:text-3xl text-white">
                     {attr.title}
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-300 leading-relaxed">
                     {attr.fullDesc}
                   </p>
                 </div>
 
                 {/* Key Features List */}
                 <div className="space-y-2">
-                  <p className="font-heading font-bold text-xs uppercase tracking-wider text-slate-800">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Zone Features:
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
                     {attr.features.map((feat, fIdx) => (
                       <div key={fIdx} className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -149,10 +149,10 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
                 </div>
 
                 {/* Safety Highlight */}
-                <div className="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/60 flex items-start gap-2.5 text-xs text-amber-900">
-                  <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-start gap-2.5 text-xs text-amber-200">
+                  <ShieldAlert className="w-4 h-4 text-[#FFD447] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold">Safety Guideline: </span>
+                    <span className="font-bold text-white">Safety Guideline: </span>
                     <span>{attr.safetyNotes}</span>
                   </div>
                 </div>
@@ -160,16 +160,16 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
                 <div className="pt-2 flex items-center gap-4">
                   <button
                     onClick={() => onNavigate('tickets')}
-                    className="px-5 py-2.5 rounded-xl font-heading font-bold text-xs text-white bg-[#FF8B24] hover:bg-[#e66c00] transition-colors flex items-center gap-1.5 shadow-xs"
+                    className="px-5 py-2.5 rounded-xl font-heading font-black text-xs uppercase tracking-wider text-white bg-[#FF8B24] hover:bg-[#e66c00] transition-colors flex items-center gap-1.5 shadow-md shadow-orange-500/20"
                   >
                     <Ticket className="w-3.5 h-3.5" />
                     <span>Book Session Passes</span>
                   </button>
                   <button
                     onClick={() => onNavigate('rules')}
-                    className="text-xs font-bold text-slate-600 hover:text-[#174A91] transition-colors"
+                    className="text-xs font-bold text-slate-400 hover:text-white transition-colors"
                   >
-                    View All Safety Rules &rarr;
+                    View Safety Rules &rarr;
                   </button>
                 </div>
               </div>
@@ -179,31 +179,31 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
       </section>
 
       {/* Parent Lounge & Café Comfort Section */}
-      <section className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-xl">
+      <section className="bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8 space-y-4">
             <span className="text-xs font-bold text-[#FFD447] uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full border border-white/10">
               For Parents & Caregivers
             </span>
-            <h2 className="font-heading font-black text-2xl sm:text-3xl">
-              Parent Lounge, High-Speed Wi-Fi & Café
+            <h2 className="font-heading font-black text-2xl sm:text-3xl text-white">
+              Parent Observation Lounge, High-Speed Wi-Fi & Café
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed max-w-2xl">
-              We know parenting is hard work! While your kids burn energy safely, relax in our comfortable observation lounge equipped with plush seating, charging ports, and unobstructed sightlines across all zones.
+              While your kids burn energy safely, relax in our comfortable observation lounge equipped with plush seating, charging ports, and unobstructed 360° sightlines across all zones.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs">
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/80 border border-slate-700">
-                <Wifi className="w-4 h-4 text-[#69C7F0] shrink-0" />
-                <span>Complimentary Fast Wi-Fi</span>
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
+                <Wifi className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                <span className="text-white">Complimentary Wi-Fi</span>
               </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/80 border border-slate-700">
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
                 <Eye className="w-4 h-4 text-[#FFD447] shrink-0" />
-                <span>360° Viewing Sightlines</span>
+                <span className="text-white">360° Viewing Sightlines</span>
               </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/80 border border-slate-700">
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
                 <Coffee className="w-4 h-4 text-[#FF8B24] shrink-0" />
-                <span>Snack & Beverage Café</span>
+                <span className="text-white">Café Refreshments</span>
               </div>
             </div>
           </div>
@@ -211,7 +211,7 @@ export const PlaygroundPage: React.FC<PlaygroundPageProps> = ({
           <div className="lg:col-span-4 flex flex-col justify-center items-start lg:items-end gap-3">
             <button
               onClick={() => onNavigate('waiver')}
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider text-slate-900 bg-[#FFD447] hover:bg-[#ffcf33] transition-colors flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-heading font-black text-xs uppercase tracking-wider text-slate-950 bg-[#FFD447] hover:bg-[#ffcf33] transition-colors flex items-center justify-center gap-2 shadow-lg"
             >
               <FileCheck2 className="w-4 h-4" />
               <span>Sign Online Waiver</span>

@@ -10,6 +10,7 @@ import {
   AttractionItem,
   FAQItem,
 } from '../types';
+import { APP_IMAGES } from '../assets/images';
 
 export const BUSINESS_INFO = {
   name: 'Kids Planet Fun',
@@ -177,7 +178,7 @@ export const ATTRACTIONS: AttractionItem[] = [
     badge: 'Flagship Zone',
     shortDesc: 'A towering 4-level climbing labyrinth filled with suspension bridges, obstacle ropes, and hidden crawlways.',
     fullDesc: 'Our multi-tier indoor play maze is engineered with commercial padded safety posts, woven security netting, and exhilarating obstacles designed to build coordination, agility, and pure adventurous joy.',
-    image: '/src/assets/images/hero_indoor_playground_1794027338444.jpg',
+    image: APP_IMAGES.hero,
     features: ['4 elevation levels', 'Padded balance obstacles', 'High-durability mesh bridges', 'Safe enclosed lookout decks'],
     safetyNotes: 'Kids must wear grip socks. No rough horseplay or climbing on outside nets.',
   },
@@ -188,7 +189,7 @@ export const ATTRACTIONS: AttractionItem[] = [
     badge: 'Fan Favorite',
     shortDesc: 'Tens of thousands of sanitized balls, suction vacuum chutes, and pneumatic soft ball blaster cannons.',
     fullDesc: 'Dive into an expansive sea of colorful balls! Kids can load balls into interactive suction chutes, watch them shoot into overhead collection buckets, and fire harmless soft foam spheres from the elevated blaster deck.',
-    image: '/src/assets/images/ball_pit_wave_slides_1794027339856.jpg',
+    image: APP_IMAGES.ballPit,
     features: ['Over 50,000 sanitized balls', 'Pneumatic air cannon blasters', 'Dual drop chutes', 'Deep impact-cushioning base'],
     safetyNotes: 'No throwing balls directly at faces. Keep personal items in cubbies.',
   },
@@ -199,7 +200,7 @@ export const ATTRACTIONS: AttractionItem[] = [
     badge: 'High Thrills',
     shortDesc: 'Side-by-side triple wave slides for racing friends, plus high-speed spiral tube slides.',
     fullDesc: 'Experience the rush of sliding down our 20-foot tall wavy slides or zooming through covered twister tubes that empty smoothly onto safety-cushioned landing mats.',
-    image: '/src/assets/images/ball_pit_wave_slides_1794027339856.jpg',
+    image: APP_IMAGES.ballPit,
     features: ['Triple-lane wave racing slide', '360-degree enclosed tube slide', 'Extra-deep landing safety zones', 'Smooth anti-friction polish'],
     safetyNotes: 'Always slide feet first, one child at a time. Do not climb up slides.',
   },
@@ -210,7 +211,7 @@ export const ATTRACTIONS: AttractionItem[] = [
     badge: 'Safe & Gentle',
     shortDesc: 'Enclosed, ultra-gentle soft play paradise designed specifically for infants, crawlers, and early walkers.',
     fullDesc: 'Big kids have their playground, and tiny tots have their own sanctuary! Gated and strictly monitored for guests 3 and under, with memory foam climbing wedges, gentle mini-slides, interactive wall gears, and baby ball pond.',
-    image: '/src/assets/images/toddler_soft_play_1794027340007.jpg',
+    image: APP_IMAGES.toddler,
     features: ['Strictly ages 0–3 only', 'Gated perimeter with soft latch', 'Sensory tactile puzzle boards', 'Ultra-cushioned floor padding'],
     safetyNotes: 'Direct parent supervision is required at all times inside the toddler zone.',
   },
@@ -221,7 +222,7 @@ export const ATTRACTIONS: AttractionItem[] = [
     badge: 'High Energy',
     shortDesc: 'Seamless commercial trampolines with heavy-duty safety padding and springless security.',
     fullDesc: 'Burn off limitless energy! Our padded rebound trampoline court gives kids the bounce they love with high-grade safety netting, angled rebound walls, and strict one-jumper-per-square spacing.',
-    image: '/src/assets/images/hero_indoor_playground_1794027338444.jpg',
+    image: APP_IMAGES.hero,
     features: ['High-tension bounce mats', '100% thick foam boundary padding', 'Angled boundary mats', 'Attendant supervision'],
     safetyNotes: 'One jumper per trampoline square. No inverted flips or dangerous stunts.',
   },
@@ -232,7 +233,7 @@ export const ATTRACTIONS: AttractionItem[] = [
     badge: 'Prizes & Games',
     shortDesc: 'Family-friendly interactive arcade cabinets, air hockey, claw games, and ticket redemption prizes.',
     fullDesc: 'Take a play break and challenge mom, dad, or friends to intense air hockey showdowns, basketball hoops, racing simulators, and fun ticket games. Redeem electronic tickets at our dazzling prize showcase!',
-    image: '/src/assets/images/arcade_family_games_1794027340348.jpg',
+    image: APP_IMAGES.arcade,
     features: ['Contactless tap-to-play cards', 'Classic & modern family games', 'Dual air hockey tables', 'Loaded prize redemption shop'],
     safetyNotes: 'Please treat machines respectfully. Card reloads available at kiosks.',
   },
@@ -240,31 +241,31 @@ export const ATTRACTIONS: AttractionItem[] = [
 
 export const GALLERY_IMAGES = [
   {
-    src: '/src/assets/images/hero_indoor_playground_1794027338444.jpg',
+    src: APP_IMAGES.hero,
     title: 'Multi-Level Adventure Playground',
     category: 'Play Maze',
     caption: 'Towering multi-story climb maze with dual slides and ball pits',
   },
   {
-    src: '/src/assets/images/ball_pit_wave_slides_1794027339856.jpg',
+    src: APP_IMAGES.ballPit,
     title: 'Ball Pit Blaster & Double Wave Slides',
     category: 'Ball Pit',
     caption: 'Joyful smiles sliding into our 50,000+ ball ocean with air blasters',
   },
   {
-    src: '/src/assets/images/birthday_party_room_1794027339445.jpg',
+    src: APP_IMAGES.birthday,
     title: 'Private Birthday Celebration Suites',
     category: 'Parties',
     caption: 'Vibrant decorated party rooms with balloons, treats, and birthday cake',
   },
   {
-    src: '/src/assets/images/toddler_soft_play_1794027340007.jpg',
+    src: APP_IMAGES.toddler,
     title: 'Gentle Toddler Soft Play Sanctuary',
     category: 'Toddlers',
     caption: 'Enclosed, spotless safe play zone for infants and toddlers up to age 3',
   },
   {
-    src: '/src/assets/images/arcade_family_games_1794027340348.jpg',
+    src: APP_IMAGES.arcade,
     title: 'Galaxy Family Arcade Center',
     category: 'Arcade',
     caption: 'Air hockey, basketball shootouts, and prize redemption games',

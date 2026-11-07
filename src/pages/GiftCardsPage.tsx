@@ -44,21 +44,21 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
   const themes = {
     planet: {
       name: 'Cosmic Adventure',
-      gradient: 'from-[#174A91] via-[#1b5ab0] to-[#FF8B24]',
-      badgeText: 'ADVENTURE PASS',
+      gradient: 'from-[#0B1323] via-[#174A91] to-[#38BDF8]',
+      badgeText: 'ADVENTURE PASS // VIP',
       badgeColor: 'bg-[#FFD447] text-slate-900',
     },
     birthday: {
       name: 'Birthday Splash',
-      gradient: 'from-[#FF8B24] via-[#ff6b3d] to-[#FFD447]',
-      badgeText: 'HAPPY BIRTHDAY',
+      gradient: 'from-[#1a0f07] via-[#FF8B24] to-[#FFD447]',
+      badgeText: 'HAPPY BIRTHDAY // VIP',
       badgeColor: 'bg-white text-[#FF8B24]',
     },
     cosmic: {
       name: 'Neon Galaxy Star',
-      gradient: 'from-purple-900 via-[#174A91] to-sky-500',
-      badgeText: 'VIP EXPLORER',
-      badgeColor: 'bg-[#69C7F0] text-slate-900',
+      gradient: 'from-purple-950 via-[#174A91] to-[#38BDF8]',
+      badgeText: 'CYBER EXPLORER // VIP',
+      badgeColor: 'bg-[#38BDF8] text-slate-950',
     },
   };
 
@@ -92,30 +92,30 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
     <div className="space-y-16 sm:space-y-24 max-w-7xl mx-auto px-4 sm:px-6 py-8">
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto space-y-4">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF8B24] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
-          The Perfect Present
+        <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF8B24] bg-[#FF8B24]/10 px-3.5 py-1.5 rounded-full border border-[#FF8B24]/30">
+          INSTANT DIGITAL PASS // GIFT CARDS
         </span>
-        <h1 className="font-heading font-black text-4xl sm:text-5xl text-slate-900 leading-tight">
-          GIVE THE GIFT OF FUN!
+        <h1 className="font-heading font-black text-4xl sm:text-5xl text-white leading-tight">
+          GIVE THE GIFT OF ADVENTURE!
         </h1>
-        <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+        <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
           Surprise grandchildren, nieces, nephews, and friends with the ultimate gift of active play, wave slides, ball pits, and arcade thrills. Delivered instantly by email!
         </p>
       </section>
 
       {purchasedCard ? (
         /* Success Screen */
-        <div className="max-w-2xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl text-center space-y-6">
-          <div className="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto shadow-md">
+        <div className="max-w-2xl mx-auto bg-[#0B1323] rounded-3xl p-8 sm:p-12 border border-white/10 shadow-2xl text-center space-y-6">
+          <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto shadow-md">
             <CheckCircle2 className="w-8 h-8" />
           </div>
 
           <div className="space-y-2">
-            <h3 className="font-heading font-black text-2xl sm:text-3xl text-slate-900">
+            <h3 className="font-heading font-black text-2xl sm:text-3xl text-white">
               Gift Card Sent to {purchasedCard.recipientName}!
             </h3>
-            <p className="text-sm text-slate-600">
-              A digital voucher with code <strong>{purchasedCard.code}</strong> has been sent to <strong>{purchasedCard.recipientEmail}</strong>.
+            <p className="text-sm text-slate-400">
+              A digital voucher with code <strong className="text-[#38BDF8] font-mono">{purchasedCard.code}</strong> has been transmitted to <strong className="text-white font-mono">{purchasedCard.recipientEmail}</strong>.
             </p>
           </div>
 
@@ -123,12 +123,12 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
           <div
             className={`max-w-md mx-auto aspect-16/10 rounded-3xl p-6 bg-gradient-to-br ${
               themes[selectedTheme].gradient
-            } text-white shadow-xl relative overflow-hidden flex flex-col justify-between text-left`}
+            } text-white shadow-2xl relative overflow-hidden flex flex-col justify-between text-left border border-white/20`}
           >
             <div className="flex justify-between items-start">
               <div>
                 <span
-                  className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                  className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
                     themes[selectedTheme].badgeColor
                   }`}
                 >
@@ -143,11 +143,11 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
               </span>
             </div>
 
-            <div className="space-y-1">
-              <p className="text-xs text-blue-100">
+            <div className="space-y-1 bg-black/40 backdrop-blur-md p-3 rounded-xl border border-white/10">
+              <p className="text-xs text-slate-300">
                 To: <strong className="text-white">{purchasedCard.recipientName}</strong>
               </p>
-              <p className="text-xs text-blue-100 italic line-clamp-2">
+              <p className="text-xs text-slate-300 italic line-clamp-2">
                 "{purchasedCard.message}"
               </p>
             </div>
@@ -165,13 +165,13 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                 setRecipientName('');
                 setRecipientEmail('');
               }}
-              className="px-6 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
+              className="px-6 py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider text-slate-300 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
             >
               Send Another Gift Card
             </button>
             <button
               onClick={() => onNavigate('tickets')}
-              className="px-6 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider text-white bg-[#174A91] hover:bg-[#113a73] transition-colors"
+              className="px-6 py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-[#174A91] to-[#38BDF8] hover:brightness-110 transition-colors"
             >
               Book Play Session &rarr;
             </button>
@@ -181,11 +181,11 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
         /* Gift Card Customizer & Live Card Preview */
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Form: Theme & Amount Selection */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-6">
+          <div className="lg:col-span-7 bg-[#0B1323] rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl space-y-6">
             {/* Theme Selector */}
             <div className="space-y-3">
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                1. Choose Card Design:
+              <label className="block text-xs font-mono font-bold uppercase tracking-wider text-[#38BDF8]">
+                01 // CHOOSE CARD DESIGN:
               </label>
               <div className="grid grid-cols-3 gap-3">
                 {(['planet', 'birthday', 'cosmic'] as const).map((t) => (
@@ -193,10 +193,10 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                     key={t}
                     type="button"
                     onClick={() => setSelectedTheme(t)}
-                    className={`p-3 rounded-2xl border text-xs font-bold transition-all text-center ${
+                    className={`p-3.5 rounded-2xl border text-xs font-bold transition-all text-center ${
                       selectedTheme === t
-                        ? 'border-[#FF8B24] ring-2 ring-[#FF8B24]/20 bg-orange-50/50 text-slate-900 shadow-2xs'
-                        : 'border-slate-200 text-slate-600 hover:bg-slate-50'
+                        ? 'border-[#38BDF8] bg-[#38BDF8]/15 text-white ring-2 ring-[#38BDF8]/30 shadow-lg'
+                        : 'border-white/10 bg-[#070B14] text-slate-400 hover:text-white hover:border-white/20'
                     }`}
                   >
                     <p className="font-heading">{themes[t].name}</p>
@@ -207,10 +207,10 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
 
             {/* Value Selector */}
             <div className="space-y-3">
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                2. Select Gift Card Amount:
+              <label className="block text-xs font-mono font-bold uppercase tracking-wider text-[#FF8B24]">
+                02 // SELECT GIFT CARD AMOUNT:
               </label>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-4 gap-2.5">
                 {[25, 50, 75, 100].map((val) => (
                   <button
                     key={val}
@@ -219,10 +219,10 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                       setAmount(val);
                       setIsCustom(false);
                     }}
-                    className={`py-3 rounded-xl font-heading font-bold text-sm transition-all ${
+                    className={`py-3.5 rounded-xl font-heading font-bold text-sm transition-all ${
                       !isCustom && amount === val
-                        ? 'bg-[#174A91] text-white shadow-xs'
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        ? 'bg-gradient-to-r from-[#174A91] to-[#38BDF8] text-white shadow-md border border-[#38BDF8]/30'
+                        : 'bg-[#070B14] text-slate-300 border border-white/10 hover:border-white/25 hover:text-white'
                     }`}
                   >
                     ${val}
@@ -235,13 +235,13 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => setIsCustom(!isCustom)}
-                  className="text-xs font-semibold text-[#FF8B24] hover:underline"
+                  className="text-xs font-mono text-[#38BDF8] hover:underline"
                 >
                   {isCustom ? '← Choose standard value' : '+ Enter custom amount'}
                 </button>
                 {isCustom && (
                   <div className="mt-2 flex items-center gap-2 max-w-xs">
-                    <span className="font-bold text-slate-500">$</span>
+                    <span className="font-bold text-[#FFD447] font-mono">$</span>
                     <input
                       type="number"
                       min="15"
@@ -249,7 +249,7 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                       value={customAmount}
                       onChange={(e) => setCustomAmount(e.target.value)}
                       placeholder="e.g. 60"
-                      className="w-full px-3 py-2 rounded-xl border border-slate-300 text-sm font-bold font-mono focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                      className="w-full px-3 py-2 rounded-xl bg-[#070B14] border border-white/15 text-sm font-bold font-mono text-white focus:outline-none focus:border-[#38BDF8]"
                     />
                   </div>
                 )}
@@ -257,14 +257,15 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Recipient & Sender Inputs */}
-            <form onSubmit={handlePurchase} className="space-y-4 pt-2 border-t border-slate-100">
-              <h4 className="font-heading font-bold text-slate-900 text-sm">
-                3. Recipient & Sender Details
+            <form onSubmit={handlePurchase} className="space-y-4 pt-4 border-t border-white/10">
+              <h4 className="font-heading font-bold text-white text-sm flex items-center gap-2">
+                <span className="text-[#FFD447] font-mono text-xs">03 //</span>
+                <span>Recipient & Sender Parameters</span>
               </h4>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                     Recipient’s Name *
                   </label>
                   <input
@@ -273,12 +274,12 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                     value={recipientName}
                     onChange={(e) => setRecipientName(e.target.value)}
                     placeholder="e.g. Grandma, Lucas, Ava"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#38BDF8]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                     Recipient’s Email *
                   </label>
                   <input
@@ -287,14 +288,14 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                     value={recipientEmail}
                     onChange={(e) => setRecipientEmail(e.target.value)}
                     placeholder="lucas@family.com"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#38BDF8]"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                     Your Name (Sender) *
                   </label>
                   <input
@@ -303,25 +304,25 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                     value={senderName}
                     onChange={(e) => setSenderName(e.target.value)}
                     placeholder="e.g. Uncle David"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#38BDF8]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                     Delivery Method
                   </label>
                   <input
                     type="text"
                     disabled
-                    value="Instant Digital Email Delivery"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-xs text-slate-500 font-medium"
+                    value="Instant Digital Email Transmission"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-white/10 bg-[#070B14] text-xs text-slate-400 font-mono"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                   Personal Message
                 </label>
                 <textarea
@@ -329,21 +330,21 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Write a sweet birthday or adventure note..."
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#38BDF8]"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 rounded-xl font-heading font-black text-xs uppercase tracking-wider text-white bg-gradient-to-r from-[#FF8B24] to-[#f87807] hover:from-[#f87807] hover:to-[#e66c00] shadow-md shadow-orange-500/20 transition-all flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-xl font-mono font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-[#FF8B24] to-[#f87807] hover:brightness-110 shadow-lg shadow-[#FF8B24]/20 transition-all flex items-center justify-center gap-2"
               >
                 {loading ? (
-                  <span>Generating Digital Gift Card...</span>
+                  <span>GENERATING DIGITAL GIFT CARD...</span>
                 ) : (
                   <>
                     <CreditCard className="w-4 h-4" />
-                    <span>Purchase ${activeAmount} Gift Card</span>
+                    <span>PURCHASE ${activeAmount} GIFT CARD</span>
                   </>
                 )}
               </button>
@@ -353,11 +354,11 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
           {/* Right Column: Live Card Graphic Preview */}
           <div className="lg:col-span-5 space-y-6 sticky top-24">
             <div className="space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                Live Preview
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#38BDF8]">
+                LIVE RENDER // CARD PREVIEW
               </span>
-              <h4 className="font-heading font-bold text-slate-900 text-lg">
-                Your Digital Gift Card
+              <h4 className="font-heading font-bold text-white text-lg">
+                Your Digital Gift Card Pass
               </h4>
             </div>
 
@@ -365,13 +366,13 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
             <div
               className={`aspect-16/10 rounded-3xl p-6 bg-gradient-to-br ${
                 themes[selectedTheme].gradient
-              } text-white shadow-2xl relative overflow-hidden flex flex-col justify-between transition-all duration-300`}
+              } text-white shadow-2xl relative overflow-hidden flex flex-col justify-between transition-all duration-300 border border-white/20`}
             >
               {/* Card top row */}
               <div className="flex justify-between items-start">
                 <div>
                   <span
-                    className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                    className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
                       themes[selectedTheme].badgeColor
                     }`}
                   >
@@ -380,10 +381,10 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
                   <h4 className="font-heading font-black text-xl text-white mt-1.5 tracking-tight">
                     KIDS PLANET FUN
                   </h4>
-                  <p className="text-[10px] text-white/80">Brownsburg, Indiana</p>
+                  <p className="text-[10px] text-white/70 font-mono">Brownsburg, Indiana</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-[10px] text-white/70 block uppercase">Card Value</span>
+                  <span className="text-[10px] text-white/70 block uppercase font-mono">Card Value</span>
                   <span className="font-heading font-black text-4xl text-[#FFD447]">
                     ${activeAmount}
                   </span>
@@ -391,7 +392,7 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
               </div>
 
               {/* Message preview */}
-              <div className="space-y-1 bg-black/20 backdrop-blur-xs p-3 rounded-xl border border-white/10">
+              <div className="space-y-1 bg-black/40 backdrop-blur-md p-3 rounded-xl border border-white/10">
                 <p className="text-[11px] text-white/90">
                   To: <strong className="text-white">{recipientName || 'Recipient Name'}</strong>
                 </p>
@@ -411,13 +412,14 @@ export const GiftCardsPage: React.FC<GiftCardsPageProps> = ({ onNavigate }) => {
             </div>
 
             {/* Gift Card Benefits Box */}
-            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs text-slate-600">
-              <h5 className="font-heading font-bold text-slate-900 text-xs uppercase tracking-wider">
-                Gift Card Terms:
+            <div className="p-5 rounded-2xl bg-[#0B1323] border border-white/10 space-y-2 text-xs text-slate-400">
+              <h5 className="font-mono font-bold text-white text-xs uppercase tracking-wider flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5 text-[#38BDF8]" />
+                <span>GIFT CARD SPECIFICATIONS</span>
               </h5>
               <p>• Valid for open play admission, multi-passes, grip socks, and birthday party deposits.</p>
-              <p>• Digital cards never expire and have no maintenance fees.</p>
-              <p>• Redeemable in person at our Brownsburg front desk or online during checkout.</p>
+              <p>• Digital cards never expire and carry zero maintenance fees.</p>
+              <p>• Redeemable at our Brownsburg front desk or online during checkout.</p>
             </div>
           </div>
         </div>

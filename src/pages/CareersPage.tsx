@@ -27,45 +27,47 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
     fullName: '',
     email: '',
     phone: '',
-    position: 'Playground Attendant',
+    position: 'Playground Safety Attendant',
     experience: '',
     availability: 'Flexible (Weekdays & Weekends)',
     fileName: '',
   });
   const [submitted, setSubmitted] = useState(false);
-  const [selectedJob, setSelectedJob] = useState<string>('Playground Attendant');
+  const [selectedJob, setSelectedJob] = useState<string>('Playground Safety Attendant');
 
   const openPositions = [
     {
+      code: '01',
       title: 'Playground Safety Attendant',
-      type: 'Part-Time / Full-Time',
+      type: 'PART-TIME / FULL-TIME',
       pay: '$13.50 – $15.50 / hr + perks',
       summary:
-        'Help keep our adventure mazes, ball pits, and wave slides fun and 100% safe. Welcome kids, enforce safety rules with a smile, and maintain our hospital-grade cleanliness standards.',
+        'Help keep our adventure mazes, ball pits, and wave slides fun and 100% safe. Welcome kids, enforce safety rules with high energy, and maintain our hospital-grade cleanliness standards.',
       responsibilities: [
-        'Monitor active play structures, slides, and trampoline areas',
-        'Verify grip socks and ensure children are following height & age guidelines',
+        'Monitor active play structures, slides, and trampoline zones',
+        'Verify grip socks and ensure children follow age guidelines',
         'Assist children with positive encouragement and first aid if needed',
-        'Conduct routine clean-sweep hygiene passes across all zones',
+        'Conduct routine clean-sweep hygiene passes across arenas',
       ],
       qualifications: [
         'Energetic, dependable, and loves working with children and families',
         'CPR/First Aid certification is a plus (we provide paid training)',
-        'Ability to stand, walk, and stay active during scheduled shifts',
+        'Ability to stand, walk, and stay active during shifts',
         'Weekend availability preferred',
       ],
     },
     {
+      code: '02',
       title: 'Birthday Party Host / Hostess',
-      type: 'Part-Time (High Weekend Hours)',
+      type: 'PART-TIME (HIGH WEEKEND HOURS)',
       pay: '$14.00 – $16.00 / hr + Tips (Generous tip pool)',
       summary:
-        'Be the rockstar host who turns every birthday into an unforgettable core memory! Guide families to private rooms, serve pizza and cake, organize games, and handle party setup and cleanup.',
+        'Be the rockstar host who turns every birthday into an unforgettable core memory! Guide families to private suites, serve refreshments, organize activities, and manage setup.',
       responsibilities: [
         'Set up personalized party room decor, tableware, and gift tables',
         'Greet birthday family VIPs and coordinate timeline with parents',
-        'Serve pizza, drinks, and assist with cake presentation and singing',
-        'Complete full sanitization turnaround between party reservations',
+        'Serve pizza, drinks, and assist with cake ceremony and celebration',
+        'Complete sanitization turnaround between party reservations',
       ],
       qualifications: [
         'Outgoing, high-energy personality who brings joy to a room',
@@ -75,11 +77,12 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
       ],
     },
     {
-      title: 'Front Desk & Guest Services',
-      type: 'Part-Time / Full-Time',
+      code: '03',
+      title: 'Front Desk & Guest Concierge',
+      type: 'PART-TIME / FULL-TIME',
       pay: '$14.50 – $16.50 / hr',
       summary:
-        'The welcoming smile of Kids Planet Fun! Check in arriving families, verify digital waivers, sell admission passes, and answer guest inquiries with warmth.',
+        'The welcoming ambassador of Kids Planet Fun! Check in arriving families, verify digital waivers, issue RFID/admission passes, and assist guest inquiries with warmth.',
       responsibilities: [
         'Operate POS system for ticket admissions, multi-passes, and grip socks',
         'Verify digital liability waivers on staff iPads',
@@ -114,45 +117,45 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
     <div className="space-y-16 sm:space-y-24 max-w-7xl mx-auto px-4 sm:px-6 py-8">
       {/* Header */}
       <section className="text-center max-w-3xl mx-auto space-y-4">
-        <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF8B24] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
-          We’re Hiring for our 2026 Reopening!
+        <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#FF8B24] bg-[#FF8B24]/10 px-3.5 py-1.5 rounded-full border border-[#FF8B24]/30">
+          TEAM RECRUITMENT // 2026 GRAND REOPENING
         </span>
-        <h1 className="font-heading font-black text-4xl sm:text-5xl text-slate-900 leading-tight">
-          JOIN OUR FUN TEAM!
+        <h1 className="font-heading font-black text-4xl sm:text-5xl text-white leading-tight">
+          JOIN OUR ADVENTURE SQUAD!
         </h1>
-        <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-          Looking for a fun, uplifting, and flexible job where your workday is filled with smiles and high fives? Kids Planet Fun is looking for enthusiastic individuals to join our Brownsburg family!
+        <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+          Looking for an energetic, uplifting, and flexible career where your workday is filled with smiles, laughter, and high-fives? Kids Planet Fun is hiring for our Brownsburg flagship park!
         </p>
       </section>
 
       {/* Perks & Culture Grid */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-2">
+        <div className="p-6 rounded-2xl bg-[#0B1323] border border-white/10 space-y-2">
           <Smile className="w-6 h-6 text-[#FF8B24]" />
-          <h4 className="font-heading font-bold text-slate-900 text-sm">Fun Work Environment</h4>
-          <p className="text-xs text-slate-500">
-            Say goodbye to boring desks. Work in an upbeat, cheerful, family-centered atmosphere.
+          <h4 className="font-heading font-bold text-white text-sm">High-Vibe Atmosphere</h4>
+          <p className="text-xs text-slate-400">
+            Say goodbye to boring desks. Work in an upbeat, active, family-centered entertainment facility.
           </p>
         </div>
-        <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-2">
-          <Clock className="w-6 h-6 text-[#174A91]" />
-          <h4 className="font-heading font-bold text-slate-900 text-sm">Flexible Scheduling</h4>
-          <p className="text-xs text-slate-500">
+        <div className="p-6 rounded-2xl bg-[#0B1323] border border-white/10 space-y-2">
+          <Clock className="w-6 h-6 text-[#38BDF8]" />
+          <h4 className="font-heading font-bold text-white text-sm">Flexible Scheduling</h4>
+          <p className="text-xs text-slate-400">
             Great shifts for students, second jobs, and parents looking for weekend or weekday hours.
           </p>
         </div>
-        <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-2">
-          <Star className="w-6 h-6 text-amber-500" />
-          <h4 className="font-heading font-bold text-slate-900 text-sm">Competitive Pay + Tips</h4>
-          <p className="text-xs text-slate-500">
-            Great hourly wages, performance bonuses, and party host tips from delighted parents.
+        <div className="p-6 rounded-2xl bg-[#0B1323] border border-white/10 space-y-2">
+          <Star className="w-6 h-6 text-[#FFD447]" />
+          <h4 className="font-heading font-bold text-white text-sm">Competitive Pay + Tips</h4>
+          <p className="text-xs text-slate-400">
+            Competitive hourly wages, performance incentives, and party host tip-pooling from thrilled parents.
           </p>
         </div>
-        <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-2">
-          <Heart className="w-6 h-6 text-rose-500" />
-          <h4 className="font-heading font-bold text-slate-900 text-sm">Free Play Passes</h4>
-          <p className="text-xs text-slate-500">
-            Complimentary admission passes for your immediate family and siblings, plus café discounts.
+        <div className="p-6 rounded-2xl bg-[#0B1323] border border-white/10 space-y-2">
+          <Heart className="w-6 h-6 text-rose-400" />
+          <h4 className="font-heading font-bold text-white text-sm">Complimentary Play Passes</h4>
+          <p className="text-xs text-slate-400">
+            Free admission passes for your immediate family and siblings, plus café and arcade discounts.
           </p>
         </div>
       </section>
@@ -160,11 +163,12 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
       {/* Available Positions */}
       <section className="space-y-8">
         <div className="text-center max-w-xl mx-auto space-y-2">
-          <h3 className="font-heading font-black text-2xl sm:text-3xl text-slate-900">
-            Open Opportunities
+          <span className="text-xs font-mono text-[#38BDF8]">CAREER ROLES</span>
+          <h3 className="font-heading font-black text-2xl sm:text-3xl text-white">
+            Open Positions & Squads
           </h3>
-          <p className="text-xs sm:text-sm text-slate-600">
-            Click a role to view responsibilities and pre-fill your application below.
+          <p className="text-xs sm:text-sm text-slate-400">
+            Click a role to view specifications and pre-fill your application below.
           </p>
         </div>
 
@@ -180,49 +184,54 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
                   const el = document.getElementById('application-form');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className={`p-6 sm:p-8 rounded-3xl bg-white border transition-all cursor-pointer flex flex-col justify-between ${
+                className={`p-6 sm:p-8 rounded-3xl bg-[#0B1323] border transition-all cursor-pointer flex flex-col justify-between ${
                   isSelected
-                    ? 'border-[#174A91] ring-2 ring-[#174A91]/20 shadow-lg'
-                    : 'border-slate-200 hover:border-slate-300 shadow-xs'
+                    ? 'border-[#38BDF8] ring-2 ring-[#38BDF8]/20 shadow-xl shadow-[#38BDF8]/10'
+                    : 'border-white/10 hover:border-white/20'
                 }`}
               >
                 <div className="space-y-4">
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#FF8B24] bg-orange-50 px-2.5 py-0.5 rounded-full">
-                      {job.type}
-                    </span>
-                    <h4 className="font-heading font-bold text-xl text-slate-900 mt-2">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#FF8B24] bg-[#FF8B24]/10 border border-[#FF8B24]/20 px-2.5 py-0.5 rounded-full">
+                        {job.type}
+                      </span>
+                      <span className="font-mono text-xs text-slate-500">ROLE // {job.code}</span>
+                    </div>
+                    <h4 className="font-heading font-bold text-xl text-white mt-1">
                       {job.title}
                     </h4>
-                    <p className="text-xs font-semibold text-[#174A91] mt-0.5 font-mono">
+                    <p className="text-xs font-semibold text-[#38BDF8] mt-1 font-mono">
                       {job.pay}
                     </p>
                   </div>
 
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs text-slate-400 leading-relaxed">
                     {job.summary}
                   </p>
 
-                  <div className="space-y-2 pt-2 border-t border-slate-100 text-xs">
-                    <p className="font-bold text-slate-800">Key Duties:</p>
+                  <div className="space-y-2 pt-3 border-t border-white/10 text-xs">
+                    <p className="font-mono text-slate-300 font-bold uppercase tracking-wider text-[11px]">
+                      Core Responsibilities:
+                    </p>
                     {job.responsibilities.slice(0, 3).map((r, rIdx) => (
-                      <div key={rIdx} className="flex items-start gap-1.5 text-slate-600">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                      <div key={rIdx} className="flex items-start gap-1.5 text-slate-400">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#38BDF8] shrink-0 mt-0.5" />
                         <span>{r}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="pt-6 mt-4 border-t border-slate-100">
+                <div className="pt-6 mt-4 border-t border-white/10">
                   <span
-                    className={`w-full py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 ${
+                    className={`w-full py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 ${
                       isSelected
-                        ? 'bg-[#174A91] text-white'
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        ? 'bg-gradient-to-r from-[#174A91] to-[#38BDF8] text-white shadow-md'
+                        : 'bg-[#070B14] border border-white/10 text-slate-300 hover:text-white hover:border-white/25'
                     }`}
                   >
-                    <span>{isSelected ? 'Selected' : 'Apply for this Role'}</span>
+                    <span>{isSelected ? 'SELECTED FOR APPLICATION' : 'APPLY FOR THIS ROLE'}</span>
                   </span>
                 </div>
               </div>
@@ -234,30 +243,30 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
       {/* Online Application Form */}
       <section
         id="application-form"
-        className="max-w-3xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-md scroll-mt-24"
+        className="max-w-3xl mx-auto bg-[#0B1323] rounded-3xl p-8 sm:p-12 border border-white/10 shadow-2xl scroll-mt-24"
       >
         <div className="text-center space-y-2 mb-8">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#174A91]">
-            Quick Online Application
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#38BDF8]">
+            DIRECT APPLICATION FORM
           </span>
-          <h3 className="font-heading font-black text-2xl sm:text-3xl text-slate-900">
+          <h3 className="font-heading font-black text-2xl sm:text-3xl text-white">
             Submit Your Application
           </h3>
-          <p className="text-xs sm:text-sm text-slate-500">
-            Takes less than 2 minutes. We review applications daily and schedule interviews quickly.
+          <p className="text-xs sm:text-sm text-slate-400">
+            Takes less than 2 minutes. We review applications daily and schedule interviews promptly.
           </p>
         </div>
 
         {submitted ? (
-          <div className="p-8 text-center space-y-4 bg-emerald-50 rounded-2xl border border-emerald-200">
-            <div className="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto shadow-md">
+          <div className="p-8 text-center space-y-4 bg-emerald-500/10 rounded-2xl border border-emerald-500/30">
+            <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto shadow-md">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h4 className="font-heading font-black text-2xl text-emerald-950">
-              Application Submitted Successfully!
+            <h4 className="font-heading font-black text-2xl text-white">
+              Application Transmitted Successfully!
             </h4>
-            <p className="text-sm text-emerald-800 max-w-md mx-auto">
-              Thank you, <strong>{formData.fullName}</strong>! We have received your application for the <strong>{formData.position}</strong> position. Our hiring manager will contact you at {formData.email} or {formData.phone}.
+            <p className="text-sm text-slate-300 max-w-md mx-auto">
+              Thank you, <strong className="text-white">{formData.fullName}</strong>! We have received your candidacy for the <strong className="text-[#38BDF8]">{formData.position}</strong> role. Our hiring supervisor will contact you at {formData.email}.
             </p>
             <button
               onClick={() => {
@@ -266,13 +275,13 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
                   fullName: '',
                   email: '',
                   phone: '',
-                  position: 'Playground Attendant',
+                  position: 'Playground Safety Attendant',
                   experience: '',
                   availability: 'Flexible (Weekdays & Weekends)',
                   fileName: '',
                 });
               }}
-              className="px-6 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider text-slate-700 bg-white border border-slate-200 hover:bg-slate-50"
+              className="px-6 py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider text-slate-300 bg-white/5 border border-white/10 hover:bg-white/10"
             >
               Submit Another Application
             </button>
@@ -281,7 +290,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                   Full Name *
                 </label>
                 <input
@@ -290,12 +299,12 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   placeholder="e.g. Jordan Miller"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#38BDF8]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                   Email Address *
                 </label>
                 <input
@@ -304,14 +313,14 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="jordan@example.com"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#38BDF8]"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                   Phone Number *
                 </label>
                 <input
@@ -320,22 +329,22 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="(317) 000-0000"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#38BDF8]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                   Position Applied For
                 </label>
                 <select
                   value={formData.position}
                   onChange={(e) => setFormData({ ...formData, position: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white text-sm focus:outline-none focus:border-[#38BDF8]"
                 >
                   <option value="Playground Safety Attendant">Playground Safety Attendant</option>
                   <option value="Birthday Party Host / Hostess">Birthday Party Host / Hostess</option>
-                  <option value="Front Desk & Guest Services">Front Desk & Guest Services</option>
+                  <option value="Front Desk & Guest Concierge">Front Desk & Guest Concierge</option>
                   <option value="Shift Supervisor / Manager">Shift Supervisor / Manager</option>
                 </select>
               </div>
@@ -343,13 +352,13 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                   Weekly Availability
                 </label>
                 <select
                   value={formData.availability}
                   onChange={(e) => setFormData({ ...formData, availability: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white text-sm focus:outline-none focus:border-[#38BDF8]"
                 >
                   <option value="Flexible (Weekdays & Weekends)">Flexible (Weekdays & Weekends)</option>
                   <option value="Weekends Only (Fri, Sat, Sun)">Weekends Only (Fri, Sat, Sun)</option>
@@ -360,7 +369,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                   Resume Upload (Optional)
                 </label>
                 <div className="relative">
@@ -373,19 +382,19 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
                   />
                   <label
                     htmlFor="resume"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-dashed border-slate-300 text-xs text-slate-600 bg-slate-50 hover:bg-slate-100 cursor-pointer flex items-center justify-between transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-dashed border-white/20 text-xs text-slate-400 bg-[#070B14] hover:bg-white/5 cursor-pointer flex items-center justify-between transition-colors"
                   >
                     <span className="truncate">
                       {formData.fileName || 'Upload PDF/Doc resume...'}
                     </span>
-                    <Upload className="w-4 h-4 text-slate-400 shrink-0" />
+                    <Upload className="w-4 h-4 text-slate-500 shrink-0" />
                   </label>
                 </div>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+              <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">
                 Tell Us About Your Work Experience / Why Kids Planet? *
               </label>
               <textarea
@@ -393,17 +402,17 @@ export const CareersPage: React.FC<CareersPageProps> = ({ onNavigate }) => {
                 rows={3}
                 value={formData.experience}
                 onChange={(e) => setFormData({ ...formData, experience: e.target.value })}
-                placeholder="Share any past jobs, babysitting, sports coaching, or why you’d love working with kids..."
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#174A91]"
+                placeholder="Share any past jobs, babysitting, sports coaching, or why you'd love working with kids..."
+                className="w-full px-3.5 py-2.5 rounded-xl bg-[#070B14] border border-white/15 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#38BDF8]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-4 rounded-xl font-heading font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-[#FF8B24] to-[#f87807] hover:from-[#f87807] hover:to-[#e66c00] shadow-md shadow-orange-500/20 transition-all flex items-center justify-center gap-2"
+              className="w-full py-4 rounded-xl font-mono font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-[#FF8B24] to-[#f87807] hover:brightness-110 shadow-lg shadow-[#FF8B24]/20 transition-all flex items-center justify-center gap-2"
             >
               <Send className="w-4 h-4" />
-              <span>Submit Job Application</span>
+              <span>SUBMIT APPLICATION</span>
             </button>
           </form>
         )}
